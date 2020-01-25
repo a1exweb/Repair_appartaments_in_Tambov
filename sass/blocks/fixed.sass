@@ -3,10 +3,13 @@
     top: 0
     left: 50%
     width: 100%
-    background-color: rgba(0, 0, 0, 0.8)
+    background-color: rgba(0, 0, 0, 0)
     color: $white
     transform: translateX(-50%)
     z-index: 10
+    transition: background-color .5s
+    &--active
+        background-color: rgba(0, 0, 0, .9)
     &__wrap
         display: flex
         align-items: center
@@ -51,10 +54,9 @@
         display: none
         background-image: url("../img/map.png")
     &__button
-        +button
-            display: none
-            margin-left: 24px
-            max-width: 164px
+        display: none
+        margin-left: 24px
+        max-width: 164px
     &__callback
         display: none
         font-size: px-to-rem(14px)
