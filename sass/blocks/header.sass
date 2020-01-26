@@ -17,9 +17,12 @@
         &-two
             padding-bottom: 30px
     &__title
-        margin-top: 125px
-        margin-bottom: 24px
+        margin: 125px auto 24px
         line-height: 44px
+        max-width: 300px
+    &__subtitle
+        margin: 24px auto 64px
+        max-width: 300px
     &__button
         display: block
         padding-top: 19px
@@ -51,3 +54,52 @@
                 margin-left: 30px
             &:nth-child(2)
                 margin-right: 30px
+@media (min-resolution: 2dppx)
+    .header
+        background: $black url("../img/screen-bg-2x.jpg") 75% top /cover no-repeat
+        &__leader
+            &::after
+                background-image: url("../img/medal-2x.png")
+                background-size: cover
+@media (min-width: 580px)
+    .header
+        &__button
+            flex-basis: 264px
+            margin-right: 34px
+            &s
+                display: flex
+                align-items: center
+                justify-content: center
+                margin-bottom: 78px
+        &__leader
+            flex-basis: 288px
+            flex-shrink: 0
+            margin: 0
+@media (min-width: 600px)
+    .header
+        background-position: 70% top
+@media (min-width: 768px)
+    .header
+        &__title
+            font-size: px-to-rem(44px)
+            line-height: px-to-rem(53px)
+            max-width: 350px
+        &__subtitle
+            font-size: px-to-rem(28px)
+            line-height: px-to-rem(32px)
+            max-width: 350px
+@media (min-width: 1024px)
+    .header
+        &__title, &__subtitle
+            max-width: none
+        &__title
+            font-size: px-to-rem(54px)
+            line-height: px-to-rem(63px)
+            padding-top: 203px
+        &__subtitle
+            font-size: px-to-rem(32px)
+            line-height: px-to-rem(37px)
+            margin-bottom: 32px
+        &__buttons
+            margin-bottom: 90px
+        

@@ -8,7 +8,47 @@
         border-radius: 5px
         &:last-child
             margin-bottom: 0
+    &__icon
+        max-width: 50px
+        margin: auto
+        &-wrap
+            width: 50px
+            margin: auto
     &__text
         margin-top: 16px
         font-size: px-to-rem(16px)
         line-height: px-to-rem(24px)
+@media (min-width: 1024px)
+    .advantages
+        display: flex
+        max-width: 800px
+        margin: 0 auto 90px
+        &::after
+            position: absolute
+            left: 0
+            content: ''
+            height: 145px
+            width: 95%
+            background: rgba(0, 0, 0, .3)
+            border-radius: 0 75px 75px 0
+            z-index: -1
+        &__item
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
+            flex-basis: 25%
+            padding-left: 0
+            padding-right: 0
+            margin-bottom: 0
+            background: none
+            &:nth-child(2) .advantages__text
+                width: 150px
+                margin: 16px auto 0
+        &__text
+            font-size: px-to-rem(14px)
+            line-height: px-to-rem(22px)
+@media (min-width: 1250px)
+    .advantages
+        &::after
+            width: 85%
+    

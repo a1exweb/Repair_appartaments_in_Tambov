@@ -4,7 +4,9 @@ module.exports = function () {
         .pipe($.gp.plumber())
         .pipe($.gp.sourcemaps.init())
         .pipe($.gp.sass())
-        .pipe($.gp.autoprefixer())
+        .pipe($.gp.autoprefixer({
+          "overrideBrowserslist": ['last 20 versions']
+        }))
         .pipe($.gp.csso())
         .pipe($.gp.rename('style.min.css'))
         .pipe($.gp.sourcemaps.write(''))
