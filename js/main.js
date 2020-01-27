@@ -5,3 +5,9 @@ $(window).scroll(function () {
         $('.fixed').removeClass('fixed--active');
     }
 });
+
+$(document).ready(function() {
+	$('.fullpage').fullpage({
+        scrollOverflow: true
+	});
+});
