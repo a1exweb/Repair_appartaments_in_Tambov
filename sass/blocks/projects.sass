@@ -1,0 +1,103 @@
+.projects
+    background-color: #181818
+    color: $white
+    &__wrap
+        position: relative
+        height: 100%
+        padding-top: 5px
+        padding-bottom: 30px
+    &__slides
+        padding-left: 2px
+        padding-right: 2px
+    &__subtitle
+        margin: 24px auto
+        max-width: 250px
+    &__big
+        margin-bottom: 3px
+        img
+            display: block
+            max-width: 100%
+    &__mini
+        display: flex
+        justify-content: space-between
+        a
+            text-decoration: none
+            margin-right: 3px
+            &:last-child
+                margin-right: 0
+        img
+            display: block
+            max-width: 100%
+    &__it-was, &__task, &__result
+        margin: 24px 0
+        p
+            margin-bottom: 24px
+            font-size: px-to-rem(17px)
+            line-height: px-to-rem(24px)
+            &:first-child
+                margin-bottom: 14px
+                font-size: px-to-rem(20px)
+                line-height: px-to-rem(23px)
+    &__result
+        p
+            margin-bottom: 0px
+    &__task
+        li
+            position: relative
+            padding-left: 16px
+            margin-bottom: 24px
+            font-size: px-to-rem(17px)
+            line-height: px-to-rem(24px)
+            &::after
+                position: absolute
+                top: 9px
+                left: 2px
+                content: ''
+                width: 4px
+                height: 5px
+                background-color: $primary
+                transform: skew(-45deg)
+    &__object
+        margin: 32px 0
+        border: 1px solid #454545
+        border-radius: 5px
+    &__item
+        padding: 15px
+        border-bottom: 1px solid #454545
+        &:last-child
+            border-bottom: none
+        p
+            font-size: px-to-rem(14px)
+            line-height: px-to-rem(16px)
+            color: #787878
+        span
+            color: $white
+    &__counts
+        position: absolute
+        left: 15px
+        bottom: 15px
+        padding: 10px
+        background-color: rgba(0, 0, 0, .7)
+        color: #787878
+        font-size: px-to-rem(14px)
+        line-height: px-to-rem(22px)
+        border-radius: 5px
+        z-index: 1
+    &__first
+        font-size: px-to-rem(20px)
+        color: $white
+    & .fp-scroller
+        padding-top: 100px
+        padding-bottom: 50px
+div.fp-controlArrow.fp-prev, div.fp-controlArrow.fp-next
+    top: auto
+    bottom: 25px
+    border: none
+    width: 24px
+    height: 24px
+div.fp-controlArrow.fp-prev
+    left: calc(100% - 80px)
+    background: url("../img/arrow-prev.svg")
+div.fp-controlArrow.fp-next
+    left: calc(100% - 45px)
+    background: url("../img/arrow-next.svg")
