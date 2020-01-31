@@ -1,0 +1,63 @@
+.calc
+    &__group
+        padding: 0
+        border: none
+        margin: 20px 0
+    &__title
+        margin-bottom: 10px
+        font-size: px-to-rem(14px)
+        line-height: px-to-rem(16px)
+        font-weight: 700
+    &__radio
+        margin-bottom: 6px
+        &:last-of-type
+            margin-bottom: 0
+        input[type="radio"]
+            display: none
+            &:checked + label
+                &:before
+                    position: absolute
+                    top: 8px
+                    left: 4px
+                    content: ''
+                    width: 8px
+                    height: 3px
+                    border-left: 2px solid $primary
+                    border-bottom: 2px solid $primary
+                    transform: rotate(-45deg)
+        label
+            display: inline-block
+            position: relative
+            padding-left: 25px
+            font-size: px-to-rem(16px)
+            line-height: px-to-rem(24px)
+            cursor: pointer
+            &::after
+                position: absolute
+                top: 50%
+                left: 0
+                content: ''
+                width: 16px
+                height: 16px
+                background-color: transparent
+                border: 1px solid $primary
+                border-radius: 5px
+                transform: translateY(-50%)
+    &__range
+        display: none
+    &__square
+        display: block
+        width: 100%
+        padding: 12px 0
+        background-color: transparent
+        color: $white
+        text-align: center
+        font-size: px-to-rem(14px)
+        line-height: px-to-rem(16px)
+        border: 1px solid rgba(255, 255, 255, .2)
+        border-radius: 5px
+    &__result
+        text-align: center
+        font-size: px-to-rem(16px)
+        line-height: px-to-rem(24px)
+        margin: 24px 0
