@@ -383,14 +383,21 @@
 		<div class="calculator__wrap wrap">
 			<h2 class="title calculator__title">Расчитайте стоимость ремонта</h2>
 			<picture>
-				<source media="(min-width: 1024px)"
+				<source media="(min-width: 480px)"
 						srcset="img/calculator-desktop.png">
 				<img 
 					class="calculator__img"
 					src="img/calculator.png" alt="Калькулятор">
 			</picture>
 
-			<form action="#" class="calcutor__form calc">
+			<form action="#" class="calculator__form calc">
+				<picture>
+					<source media="(min-width: 480px)"
+							srcset="img/calculator-desktop.png">
+					<img 
+						class="calculator__img--desktop"
+						src="img/calculator.png" alt="Калькулятор">
+				</picture>
 				<fieldset class="calc__group">
 					<legend class="calc__title">Тип здания:</legend>
 					<div class="calc__wrap">
@@ -457,7 +464,7 @@
 
 				<div class="calc__wrap">
 					<button class="button calc__button">Расчитать</button>
-					<p class="calc__result">Результат: <span>1 600 000</span> &#8381;</p>
+					<p class="calc__result">Результат: <span>1600000</span> &#8381;</p>
 				</div>
 				<!-- /.calc__wrap -->
 			</form>

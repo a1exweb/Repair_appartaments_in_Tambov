@@ -1,4 +1,9 @@
 .calc
+    background: $black
+    padding: 210px 24px 24px 24px
+    max-width: 287px
+    margin: -210px auto 32px
+    border-radius: 5px
     &__group
         padding: 0
         border: none
@@ -10,8 +15,6 @@
         font-weight: 700
     &__radio
         margin-bottom: 6px
-        &:last-of-type
-            margin-bottom: 0
         input[type="radio"]
             display: none
             &:checked + label
@@ -61,3 +64,101 @@
         font-size: px-to-rem(16px)
         line-height: px-to-rem(24px)
         margin: 24px 0
+@media (min-width: 480px)
+    .calc
+        max-width: 458px
+        margin-top: -320px
+        padding-top: 320px
+        &__radio
+            margin-right: 15px
+            &:last-child
+                margin-right: 0
+        &__wrap
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+        &__title, &__input
+            flex-basis: 100%
+            width: 100%
+        &__button
+            flex-basis: 164px
+            width: 164px
+            margin-right: 30px
+        &__result
+            font-size: px-to-rem(14px)
+            line-height: px-to-rem(16px)
+@media (min-width: 1024px)
+    .calc
+        max-width: none
+        padding-left: 215px
+        margin-left: 250px
+        margin-top: -5px
+        padding-top: 5px
+        padding-bottom: 25px
+        position: relative
+        &__input
+            display: none
+        &__range
+            display: flex
+            align-items: center
+            flex-basis: 100%
+            margin-top: 7px
+            margin: 7px
+            output
+                width: 67px
+                margin-right: 24px
+                padding: 3px 0
+                background-color: transparent
+                color: $white
+                text-align: center
+                font-size: px-to-rem(14px)
+                line-height: px-to-rem(16px)
+                border: 1px solid rgba(255, 255, 255, .2)
+                border-radius: 5px
+            input[type="range"]
+                width: 280px
+                flex-basis: 280px
+                margin: 10px 0
+                appearance: none
+                &::-webkit-slider-runnable-track
+                    height: 4px
+                    background-color: $white
+                    width: 100%
+                    cursor: pointer
+                    border-radius: 10px
+                &::moz-range-track
+                    height: 4px
+                    background-color: $white
+                    width: 100%
+                    cursor: pointer
+                    border-radius: 10px
+                &::-ms-track
+                    height: 4px
+                    background-color: $white
+                    width: 100%
+                    cursor: pointer
+                    border-radius: 10px
+                &::-webkit-slider-thumb
+                    width: 8px
+                    height: 8px
+                    margin-top: -2px
+                    background-color: $primary
+                    border-radius: 8px
+                    cursor: pointer
+                    appearance: none
+                &::-moz-range-thumb
+                    width: 8px
+                    height: 8px
+                    margin-top: -2px
+                    background-color: $primary
+                    border-radius: 8px
+                    cursor: pointer
+                    appearance: none
+                &::-ms-thumb
+                    width: 8px
+                    height: 8px
+                    margin-top: -2px
+                    background-color: $primary
+                    border-radius: 8px
+                    cursor: pointer
+                    appearance: none

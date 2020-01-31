@@ -7,3 +7,29 @@
     &__img
         display: block
         margin: 24px auto
+        &--desktop
+            display: none
+@media (min-width: 1024px)
+    .calculator
+        &__title
+            margin-bottom: 32px
+            padding-left: 465px
+            text-align: left
+        &__img
+            display: none
+            &--desktop
+                display: block
+                position: absolute
+                top: calc(50% - 37px)
+                left: -255px
+                transform: translateY(-50%)
+@media (min-width: 1200px)
+    .calculator
+        &__img
+            &--desktop
+                left: -260px
+@media (min-width: 1400px)
+    .calculator
+        &__img
+            &--desktop
+                left: -270px
