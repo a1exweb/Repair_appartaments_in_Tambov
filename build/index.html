@@ -28,7 +28,7 @@
 					<span>8 800 123 45 67</span>
 				</a>
 			</div>
-			<button class="button fixed__button">Закажите звонок</button>
+			<button class="button fixed__button" id="button-call">Закажите звонок</button>
 			<p class="fixed__callback">Перезвоним<br> за 24 секунды</p>
 		</div>
 		<!-- /.fixed__wrap wrap -->
@@ -381,6 +381,19 @@
 </div>
 <!-- /.fullpage -->
 </div>
+
+<div class="modal-overlay">
+	<form action="#" class="modal-form">
+		<span class="modal-close" id="modal-close">&times;</span>
+		<h2 class="title modal-form__title">Оставьте заявку и наш менеджер свяжется с вами</h2>
+		<input name="userName" type="text" class="modal-form__input" placeholder="Имя:">
+		<input name="userPhone" type="tel" class="modal-form__input" placeholder="Телефон:">
+		<input name="userEmail" type="email" class="modal-form__input" placeholder="Email:">
+		<button class="button modal-form__button">Отправить</button>
+	</form>
+</div>
+
+
 <script src="js/all.min.js"></script>
 </body>
 </html>

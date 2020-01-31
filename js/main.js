@@ -24,4 +24,20 @@ $(document).ready(function() {
         event.preventDefault();
         $('.projects__big img').attr('src', $(this).attr('data-src'));
     }
+
+    let modalOverlay = $('.modal-overlay'),
+        modalForm = $('.modal-form');
+    $('#button-call').on('click', function () {
+        modalOverlay.addClass('modal-overlay--active');
+    });
+
+    $('#modal-close').on('click', function () {
+        modalOverlay.removeClass('modal-overlay--active');
+    })
+
+    $(window).on('click', function (event) {
+        if (event.target == modalOverlay[0]) {
+            modalOverlay.removeClass('modal-overlay--active');
+        }
+    })
 });
