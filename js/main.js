@@ -20,11 +20,22 @@ $(document).ready(function() {
         }
     });
 
+    $(document).on('click', '.fixed__hamburger', openMenu);
+    $(document).on('click', '.main-menu__close', closeMenu);
     $(document).on('click', '.projects__mini a', changeImg);
     $(document).on('input', '.calc', changeInput);
     $(document).on('click', '.scroll-down', function () {
         fullpage_api.moveSectionDown();
     });
+
+    function openMenu() {
+        $('.main-menu').addClass('main-menu--active');
+    }
+
+    function closeMenu() {
+        $('.main-menu').removeClass('main-menu--active');
+    }
+
     function changeImg(event) {
         event.preventDefault();
         $('.projects__big img').attr('src', $(this).attr('data-src'));
@@ -33,7 +44,6 @@ $(document).ready(function() {
     function changeInput(event) {
         event.preventDefault();
         $(this).find('.calc__range output').val($(this).find('.calc__range input').val());
-        // $(this).find('.calc__result span').html($(this).find('.calc__range input').val()*price);
     }
 
     $('.calc__button').on('click', function (event) {
@@ -41,10 +51,12 @@ $(document).ready(function() {
         $('.calc').find('.calc__result span').html($('.calc').find('.calc__range input').val()*price);
     });
 
-    let modalOverlay = $('.modal-overlay'),
-        modalForm = $('.modal-form');
-    $('#button-call').on('click', function () {
+    let modalOverlay = $('.modal-overlay');
+    $('[data-modal="button-call"]').on('click', function () {
         modalOverlay.addClass('modal-overlay--active');
+        if ($('.main-menu--active')[0]) {
+            closeMenu();
+        }
     });
 
     $('#modal-close').on('click', function () {

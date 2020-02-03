@@ -1,0 +1,80 @@
+.main-menu
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    &::after
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        content: ''
+        background-color: rgba(0, 0, 0, .8)
+        opacity: 0
+        transition: opacity .5s
+        z-index: 99
+    &__list
+        position: relative
+        list-style: none
+        max-width: 320px
+        height: 100%
+        padding-top: 32px
+        padding-left: 32px
+        padding-right: 32px
+        background: url("../img/girl-mobile.png") 100px top no-repeat $primary
+        z-index: 200
+        transform: translateX(-100%)
+        transition: transform .5s
+        overflow-y: auto
+    &__item
+        margin: 24px 0
+        &:first-child
+            margin-top: 0
+            display: flex
+            align-items: center
+            span
+                margin-top: -3px
+                color: $black
+    &__link, & span
+        text-decoration: none
+        font-size: px-to-rem(14px)
+        line-height: px-to-rem(16px)
+    &__link
+        color: $black
+    &__close
+        border: none
+        background: transparent
+        margin-right: 10px
+        cursor: pointer
+    &__phone
+        display: block
+        margin-top: 32px
+        font-size: px-to-rem(24px)
+        line-height: px-to-rem(28px)
+        text-decoration: none
+        color: $black
+    &__callback
+        color: rgba($black, .5)
+    &__button
+        background-color: $white
+        color: $black
+    &__link
+        &:hover
+            text-decoration: underline
+    &--active
+        z-index: 200
+        &::after
+            opacity: 1
+        .main-menu__list
+            transform: translateX(0)
+@media (min-width: 1024px) and (min-height: 768px)
+    .main-menu
+        &__button, &__callback, &__phone
+            display: none
+        &__list
+            padding-top: 64px
+            padding-left: 64px
+            background: url("../img/girl.png") center bottom no-repeat $primary
+            max-width: 300px
