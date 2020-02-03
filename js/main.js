@@ -36,6 +36,12 @@ $(document).ready(function() {
         $('.main-menu').removeClass('main-menu--active');
     }
 
+    $(window).on('click', function (event) {
+        if (event.target == $('.main-menu--active')[0]) {
+            $('.main-menu').removeClass('main-menu--active');
+        }
+    })
+
     function changeImg(event) {
         event.preventDefault();
         $('.projects__big img').attr('src', $(this).attr('data-src'));
