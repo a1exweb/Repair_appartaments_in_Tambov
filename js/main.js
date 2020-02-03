@@ -10,6 +10,8 @@ $(document).ready(function() {
 	$('.fullpage').fullpage({
         scrollOverflow: true,
         scrollOverflowOptions: {click: false},
+        menu: '.menu',
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'lastPage'],
         afterRender: function () {
             $('.projects__last').html($('.projects__slides').length);
         },
@@ -20,7 +22,9 @@ $(document).ready(function() {
 
     $(document).on('click', '.projects__mini a', changeImg);
     $(document).on('input', '.calc', changeInput);
-
+    $(document).on('click', '.scroll-down', function () {
+        fullpage_api.moveSectionDown();
+    });
     function changeImg(event) {
         event.preventDefault();
         $('.projects__big img').attr('src', $(this).attr('data-src'));

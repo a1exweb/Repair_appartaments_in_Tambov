@@ -1,0 +1,43 @@
+.menu
+    display: none
+@media (min-width: 1024px)
+    .menu
+        position: fixed
+        top: 50%
+        right: 32px
+        display: block
+        list-style: none
+        transform: translateY(-50%)
+        z-index: 100
+        counter-reset: counter
+        &__item
+            position: relative
+            margin-bottom: 14px
+            &:last-child
+                margin-bottom: 0
+            &::before
+                position: absolute
+                top: 50%
+                left: -20px
+                color: $white
+                font-size: px-to-rem(12px)
+                line-height: px-to-rem(14px)
+                counter-increment: counter
+                content: '0'counter(counter)
+                transform: translateY(-50%)
+                opacity: 0
+            a
+                display: block
+                width: 8px
+                height: 8px
+                border: 1px solid $primary
+                border-radius: 50%
+            &.active
+                &::before
+                    opacity: 1
+                a
+                    width: 4px
+                    height: 4px
+                    margin: 0 auto
+                    background-color: $white
+                    border: none
